@@ -15,6 +15,9 @@
         window.plugins.html5Video.initialize({
             "video1": "background.mp4",
         });
+        
+        window.plugins.html5Video.play("video1");
+
     };
 
     function onPause() {
