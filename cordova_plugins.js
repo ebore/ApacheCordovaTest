@@ -1,25 +1,7 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
-module.exports = [
-    {
-        "file": "plugins/jaeger.Html5Video/www/Html5Video.js",
-        "id": "jaeger.Html5Video.Html5Video",
-        "clobbers": [
-            "plugins.html5Video"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.device/www/device.js",
-        "id": "org.apache.cordova.device.device",
-        "clobbers": [
-            "device"
-        ]
-    }
-];
+module.exports = [];
 module.exports.metadata = 
 // TOP OF METADATA
-{
-    "jaeger.Html5Video": "1.2.1",
-    "org.apache.cordova.device": "0.3.1-dev"
-}
+{}
 // BOTTOM OF METADATA
 });

@@ -11,13 +11,7 @@
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind(this), false );
         document.addEventListener('resume', onResume.bind(this), false);
-
-        window.plugins.html5Video.initialize({
-            "video1": "background.mp4",
-        });
         
-        window.plugins.html5Video.play("video1");
-
     };
 
     function onPause() {
