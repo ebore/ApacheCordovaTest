@@ -1,32 +1,25 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/org.apache.cordova.battery-status/www/battery.js",
-        "id": "org.apache.cordova.battery-status.battery",
+        "file": "plugins/jaeger.Html5Video/www/Html5Video.js",
+        "id": "jaeger.Html5Video.Html5Video",
         "clobbers": [
-            "navigator.battery"
+            "plugins.html5Video"
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
-        "id": "org.apache.cordova.dialogs.notification",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.dialogs/www/android/notification.js",
-        "id": "org.apache.cordova.dialogs.notification_android",
-        "merges": [
-            "navigator.notification"
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
         ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "org.apache.cordova.battery-status": "0.2.11",
-    "org.apache.cordova.dialogs": "0.3.1-dev"
+    "jaeger.Html5Video": "1.2.1",
+    "org.apache.cordova.device": "0.3.1-dev"
 }
 // BOTTOM OF METADATA
 });
