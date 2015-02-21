@@ -6,7 +6,7 @@
 
     <!-- CordovaDemo references -->
     <link href="css/index.css" rel="stylesheet" />
-    
+
     <style type="text/css">
         html, body {
             width: 100%;
@@ -96,104 +96,108 @@
     </style>
     <script type="text/javascript">
 
-        //$(document).ready(function() {
-        //    var imageLoopTimer, textLoopTimer;
+        $(document).ready(function () {
 
-        //    //$('img').hide()
-        //    //$("#text1").hide();
+            $("#btnPlay").click(function () {
+                
+                window.plugins.html5Video.play("video1");
 
-        //    //$('video').bind('play', function() {
-        //    //    console.log('video play');
-        //    //    start();
-        //    //});
-        //    //$('video').bind('ended', function() {
-        //    //    console.log('video ended');
-        //    //    stop();
-        //    //});
-            
-        //    function start() {
-        //        startImage();
-        //        startText();
-        //    };
-        //    function stop() {
-        //        stopImage();
-        //        stopText();
-        //    };
-        //    function startImage() {
-        //        var timer, t, max = 0;
-        //        $('img').each(function(i) {
-        //            t = Number($(this).attr('starttime')) * 1000;
-        //            timer = window.setTimeout(function() {
-        //                if(i % 2 == 0) {
-        //                    $('img').eq(i).hide().css("opacity","0.70").slideDown(2000);
-        //                } else{
-        //                    $('img').eq(i).hide().css("opacity","0.70").animate({width:'toggle'},2000);
-        //                }
-        //            }, t);
-        //            $(this).attr('startTimer', timer);
-        //            console.log('set ' + $(this).attr('id') +
-        //                ' startTimer to ' + timer);
-        //            t += Number($(this).attr('displaytime')) * 1000;
-        //            timer = window.setTimeout(function() {
-        //                $('img').eq(i).animate({ opacity: 0 }, 1000);
-        //            }, t);
-        //            $(this).attr('stopTimer', timer);
-        //            console.log('set ' + $(this).attr('id') +
-        //                ' stopTimer to ' + timer);
-        //            if (t > max) max = t;
-        //        });
-        //        imageLoopTimer = window.setTimeout(startImage, max);
-        //        console.log('set imageLoopTimer to ' + imageLoopTimer);
-        //    };
-        //    function stopImage() {
-        //        window.clearTimeout(imageLoopTimer);
-        //        console.log('clear timeout of ' + imageLoopTimer);
-        //        $('img').each(function(i) {
-        //            window.clearTimeout($(this).attr('startTimer'));
-        //            window.clearTimeout($(this).attr('stopTimer'));
-        //            console.log('clear timeout of ' + $(this).attr('startTimer')
-        //                + ' and ' + $(this).attr('stopTimer'));
-        //            $(this).hide();
-        //            console.log('hide ' + $(this).attr('id'));
-        //        });
-        //    };
-        //    function startText() {
-        //        var timer, t, max = 0;
-        //        var dt;
-        //        $('marquee').each(function(i) {
-        //            t = Number($(this).attr('starttime')) * 1000;
-        //            dt = Number($(this).attr('displaytime')) * 1000;
-        //            timer = window.setTimeout(function() {
-        //                $('marquee').eq(i).fadeIn(1000);
-        //            }, t);
-        //            $(this).attr('startTimer', timer);
-        //            console.log('set ' + $(this).attr('id') +
-        //                ' startTimer to ' + timer);
-        //            t += Number($(this).attr('displaytime')) * 1000;
-        //            timer = window.setTimeout(function() {
-        //                $('marquee').eq(i).fadeOut(1000);
-        //            }, t);
-        //            $(this).attr('stopTimer', timer);
-        //            console.log('set ' + $(this).attr('id') +
-        //                ' stopTimer to ' + timer);
-        //            if (t > max) max = t;
-        //        });
-        //        textLoopTimer = window.setTimeout(startText, max);
-        //        console.log('set textLoopTimer to ' + textLoopTimer);
-        //    };
-        //    function stopText() {
-        //        window.clearTimeout(textLoopTimer);
-        //        console.log('clear timeout of ' + textLoopTimer);
-        //        $('marquee').each(function(i) {
-        //            window.clearTimeout($(this).attr('startTimer'));
-        //            window.clearTimeout($(this).attr('stopTimer'));
-        //            console.log('clear timeout of ' + $(this).attr('startTimer')
-        //                + ' and ' + $(this).attr('stopTimer'));
-        //            $(this).hide();
-        //            console.log('hide ' + $(this).attr('id'));
-        //        });
-        //    };
-        //});
+            });                //    var imageLoopTimer, textLoopTimer;
+
+            //    //$('img').hide()
+            //    //$("#text1").hide();
+
+            //    //$('video').bind('play', function() {
+            //    //    console.log('video play');
+            //    //    start();
+            //    //});
+            //    //$('video').bind('ended', function() {
+            //    //    console.log('video ended');
+            //    //    stop();
+            //    //}    
+            //    function start() {
+            //        startImage();
+            //        startText();
+            //    };
+            //    function stop() {
+            //        stopImage();
+            //        stopText();
+            //    };
+            //    function startImage() {
+            //        var timer, t, max = 0;
+            //        $('img').each(function(i) {
+            //            t = Number($(this).attr('starttime')) * 1000;
+            //            timer = window.setTimeout(function() {
+            //                if(i % 2 == 0) {
+            //                    $('img').eq(i).hide().css("opacity","0.70").slideDown(2000);
+            //                } else{
+            //                    $('img').eq(i).hide().css("opacity","0.70").animate({width:'toggle'},2000);
+            //                }
+            //            }, t);
+            //            $(this).attr('startTimer', timer);
+            //            console.log('set ' + $(this).attr('id') +
+            //                ' startTimer to ' + timer);
+            //            t += Number($(this).attr('displaytime')) * 1000;
+            //            timer = window.setTimeout(function() {
+            //                $('img').eq(i).animate({ opacity: 0 }, 1000);
+            //            }, t);
+            //            $(this).attr('stopTimer', timer);
+            //            console.log('set ' + $(this).attr('id') +
+            //                ' stopTimer to ' + timer);
+            //            if (t > max) max = t;
+            //        });
+            //        imageLoopTimer = window.setTimeout(startImage, max);
+            //        console.log('set imageLoopTimer to ' + imageLoopTimer);
+            //    };
+            //    function stopImage() {
+            //        window.clearTimeout(imageLoopTimer);
+            //        console.log('clear timeout of ' + imageLoopTimer);
+            //        $('img').each(function(i) {
+            //            window.clearTimeout($(this).attr('startTimer'));
+            //            window.clearTimeout($(this).attr('stopTimer'));
+            //            console.log('clear timeout of ' + $(this).attr('startTimer')
+            //                + ' and ' + $(this).attr('stopTimer'));
+            //            $(this).hide();
+            //            console.log('hide ' + $(this).attr('id'));
+            //        });
+            //    };
+            //    function startText() {
+            //        var timer, t, max = 0;
+            //        var dt;
+            //        $('marquee').each(function(i) {
+            //            t = Number($(this).attr('starttime')) * 1000;
+            //            dt = Number($(this).attr('displaytime')) * 1000;
+            //            timer = window.setTimeout(function() {
+            //                $('marquee').eq(i).fadeIn(1000);
+            //            }, t);
+            //            $(this).attr('startTimer', timer);
+            //            console.log('set ' + $(this).attr('id') +
+            //                ' startTimer to ' + timer);
+            //            t += Number($(this).attr('displaytime')) * 1000;
+            //            timer = window.setTimeout(function() {
+            //                $('marquee').eq(i).fadeOut(1000);
+            //            }, t);
+            //            $(this).attr('stopTimer', timer);
+            //            console.log('set ' + $(this).attr('id') +
+            //                ' stopTimer to ' + timer);
+            //            if (t > max) max = t;
+            //        });
+            //        textLoopTimer = window.setTimeout(startText, max);
+            //        console.log('set textLoopTimer to ' + textLoopTimer);
+            //    };
+            //    function stopText() {
+            //        window.clearTimeout(textLoopTimer);
+            //        console.log('clear timeout of ' + textLoopTimer);
+            //        $('marquee').each(function(i) {
+            //            window.clearTimeout($(this).attr('startTimer'));
+            //            window.clearTimeout($(this).attr('stopTimer'));
+            //            console.log('clear timeout of ' + $(this).attr('startTimer')
+            //                + ' and ' + $(this).attr('stopTimer'));
+            //            $(this).hide();
+            //            console.log('hide ' + $(this).attr('id'));
+            //        });
+            //    };
+        });
 
         //window.onload = initialize();
 
@@ -203,10 +207,14 @@
     <body>
         
         <div id="videolayer">
-            <video id="video" autoplay loop>
-                <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" />
-                <p>Unsupported</p>
-            </video>
+            <!--<video id="video" autoplay loop>
+                    <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" />
+                    <p>Unsupported</p>
+                </video>-->
+            <video id="myvideo" loop></video>
+        </div>
+        <div>
+            <button id="btnPlay">Play!</button>
         </div>
         <div id="imagelayer">
             <img id="img0" src="media/Banners/banner_top.jpg" starttime="0" displaytime="10" />
