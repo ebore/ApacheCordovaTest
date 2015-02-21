@@ -102,23 +102,34 @@
             border: 0;
         }
 
-        .Center-Container {
-            position: relative;
+        /* This parent can be any width and height */
+        .block {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            margin-bottom:10px;
+        }
+ 
+        /* The ghost, nudged to maintain perfect centering */
+        .block:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -0.25em; /* Adjusts for spacing */
         }
 
-        .Absolute-Center {
-            /*width: 50%;
-            height: 50%;*/
+        /* The element to be centered, can
+        also be of any width and height */ 
+        .centered {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
             overflow: hidden;
-            margin: auto;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
         }
 
     </style>
+
 
     <script type="text/javascript">
 
@@ -242,13 +253,13 @@
         <img id="img2" src="media/Banners/banner_bottom.jpg" starttime="20" displaytime="10" />
         <img id="img3" src="media/Banners/banner_right.jpg" starttime="15" displaytime="5" />
     </div>-->
-    <div id="textlayer" class="Center-Container">
+    <div class="block">
 
         <marquee id="text0" behavior="scroll" loop="infinite" starttime="20" displaytime="30">
             This is the testing from remote site
         </marquee>
         
-        <div class="Absolute-Center">
+        <div class="centered">
             <ul class="rslides">
                 <li><img src="images/1.jpg" alt=""></li>
                 <li><img src="images/2.jpg" alt=""></li>
