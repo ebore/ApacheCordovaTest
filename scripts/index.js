@@ -17,8 +17,6 @@
         //});
 
         //window.plugins.html5Video.play("video1");
-        
-        alert("PhoneGap loaded!");
     };
 
     function onPause() {
